@@ -1,0 +1,34 @@
+<!DOCTYPE HTML5>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<title>Dog Door State Controller</title>
+	</head>
+
+	<body class="bg-dark">
+		<div class="jumbotron bg-dark border border-secondary">
+			<h1 class="display-4 text-white">Door State Trigger</h1>
+			<p class="lead text-white">Press the button to toggle states</p>
+			<hr class="my-4 bg-secondary">
+			<button type="button" class="btn btn-outline-primary btn-lg btn-block" onclick="SwitchState('dog')">Dog</button>
+			<br>
+			<button type="button" class="btn btn-outline-success btn-lg btn-block my-5" onclick="SwitchState('cat')">Cat</button>
+			<br>
+			<button type="button" class="btn btn-outline-danger btn-lg btn-block" onclick="SwitchState('off')">Turn Off All States</button>
+		</div>
+	</body>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particle-api-js/7.3.0/particle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+		var particle = new Particle();
+		function SwitchState(state)
+		{
+    			particle.callFunction({ deviceId: "device", name: "door", argument: state, auth: "token" });
+		}
+	</script>
+
+</html>

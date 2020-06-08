@@ -1,0 +1,6 @@
+https://www.pololu.com/product/3132/resources
+https://www.pololu.com/product/1476/resources
+https://www.pololu.com/file/0J627/SY57STH41-1006A.pdf
+https://pololu.github.io/tic-arduino/
+https://pololu.github.io/tic-arduino/
+https://www.pololu.com/docs/0J71/all#4.6
